@@ -1,0 +1,89 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------- */
+html {
+    background: url(fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: sans-serif;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header__logo {
+    margin: 3rem 0;
+    border-color:#000;
+    border-radius: 6rem;
+}
+.footer{
+	background: url(patron.png);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__texto {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 2.2rem;
+}
+.carta{
+	margin: 10px 10px 10px 650px;
+	width: 600px; 
+	height: 300px;
+}
+.navegacion {
+    background-color:dimgrey;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; 
+}
+.navegacion__enlace {
+    color: whitesmoke;
+    font-size: 3rem;
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+    color: purple;
+}
+.yo{
+    -webkit-text-stroke: 0.1px black;
+    text-align: center;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+.a{
+    font: bold;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #0a0a0a;
+    padding: 10px;
+    /* float: left; */
+    margin: 20px 600px 200px 600px;
+    background: dimgray;
+}
+.perfil{
+    margin: 10px 10px 10px 10px;
+	width: 400px; 
+	height: 400px;
+    transform: translate(730px,-100px);
+    border-radius: 100px;
+    border-color: azure;
+}

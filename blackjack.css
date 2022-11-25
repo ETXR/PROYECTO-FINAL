@@ -1,0 +1,118 @@
+* {
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+}
+/* para todo la pagina*/
+html {
+  background: url(fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: sans-serif;
+  background-attachment: fixed;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  margin: 3rem 0;
+  border-color:#000;
+  border-radius: 6rem;
+}
+.navegacion {
+  background-color:dimgrey;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem; 
+}
+.navegacion__enlace {
+  color: whitesmoke;
+  font-size: 3rem;
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+  color: purple;
+}
+
+/* (B) DEALER & PLAYER */
+/* (B1) CONTAINERS */
+#deal-data, #play-data, #deal-cards, #play-cards, #play-control { padding: 20px; }
+#deal-data, #play-data { font-weight: 700;}
+#deal-cards, #play-cards { min-height: 120px; }
+#deal-cards, #play-cards { 
+  width: 300px;
+  margin: auto; 
+}
+#deal-data { 
+  color: whitesmoke;
+  background: #272727;
+  text-align: center;
+}
+#deal-cards { 
+background: #666; 
+}
+#play-data { 
+  color: whitesmoke;
+  background: #272727;
+  text-align: center;
+}
+#play-cards { 
+  background: #666;
+}
+#play-control { 
+background: black;
+}
+#deal-stand, #play-stand {
+  margin: 10px 10px 10px 10px;
+  display: none; padding: 20px;
+  color: #fff; background:darkgreen;
+}
+#deal-stand.stood, #play-stand.stood { display: inline-block; }
+
+/* (B2) CARDS */
+#deal-cards, #play-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.bj-card {
+  display:grid;
+  align-items: center; justify-content: center;
+  margin: 10px;
+  width: 100px; height: 100px;
+  font-size: 2em;
+  text-align: center;
+  background: black;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+#deal-first .front { 
+display: none;
+}
+#deal-first.show .back { 
+display: none;
+}
+#deal-first.show .front {
+  display: block;
+}
+
+/* (C) PLAY CONTROLS */
+#play-control input {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: 0;
+  color: #fff;
+  background: purple;
+  text-align: center;
+  width: 300px;
+  margin: 0px 0px 0px 400px;
+}
+#playc-hit, #playc-stand { display: none; }
+#play-control.started #playc-start { 
+  display: none;
+  margin: 0px 0px 0px 400px;
+ }
+#play-control.started #playc-hit, #play-control.started #playc-stand { display: inline-block; }

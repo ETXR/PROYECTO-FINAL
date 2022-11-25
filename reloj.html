@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>reloj</title>
+    <link rel="stylesheet" href="estilo-reloj.css">
+  </head>
+  <body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+        </a>
+    </header>
+    <nav class="navegacion">
+        <a class="navegacion__enlace " href="index.html">Home</a>
+        <a class="navegacion__enlace" href="index.html">Mis proyectos</a>
+        <a class="navegacion__enlace" href="pong.html">Pong</a>
+        <a class="navegacion__enlace" href="lista.html">Lista de pendientes</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="reloj.html">Reloj digital</a>
+        <a class="navegacion__enlace" href="teclado.html">Teclado</a>
+        <a class="navegacion__enlace" href="black-jack.html">Blackjack 21</a>
+
+
+    </nav>
+    <div class="clock">
+      <div class="display">
+        
+</div>
+</div>
+<script>
+      setInterval(function(){
+        const clock = document.querySelector(".display");
+        let time = new Date();
+        let sec = time.getSeconds();
+        let min = time.getMinutes();
+        let hr = time.getHours();
+        let day = 'AM';
+        if(hr > 12){
+          day = 'PM';
+          hr = hr - 12;
+        }
+        if(hr == 0){
+          hr = 12;
+        }
+        if(sec < 10){
+          sec = '0' + sec;
+        }
+        if(min < 10){
+          min = '0' + min;
+        }
+        if(hr < 10){
+          hr = '0' + hr;
+        }
+        clock.textContent = hr + ':' + min + ':' + sec + " " + day;
+      });
+    </script>
+  </body>
+</html>
